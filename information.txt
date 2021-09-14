@@ -1,0 +1,87 @@
+
+-------- 12/09/2021
+
+Tecnologias a usar
+-gatsby
+-server side rendering
+-GraphQL
+
+----------------- 
+JamStack : sitios estaticos
+----------------- 
+
+>npm i -g gatsby 
+
+--Instalar una vez de manera global
+>npm install -g gatsby-cli
+
+----------------- 
+-crear proyecto
+>gatsby new hotelgatsby
+
+---ingresar
+> cd hotelgatsby
+
+--iniciar proyecto
+>gatsby develop
+
+
+---------POR SI AL EJECUTAR SAL ERROR QUE NO ENCUENTRA 🔴
+https://www.npmjs.com/package/gatsby-core-utils
+
+>npm install gatsby-core-utils
+
+----------------- si funcionó para actualizar NPM Version
+https://qastack.mx/programming/18412129/how-can-i-update-npm-on-windows
+Esta es la nueva mejor manera de actualizar npm en Windows .
+
+Ejecute PowerShell como administrador
+
+Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force
+>npm install -g npm-windows-upgrade
+>npm-windows-upgrade
+
+-------------------------
+https://cdnjs.com/libraries/normalize
+
+https://fonts.google.com/
+
+>npm i @emotion/core @emotion/styled gatsby-plugin-emotion
+-------------------------
+Agregar en gatsby-config.js en plugin "gatsby-plugin-emotion"
+
+
+-------------------------
+Para poder ver las imagenes, debe ejecutar una consulta con GraphQL
+desde http://localhost:8000/___graphql
+query{
+	allFile(filter: {sourceInstanceName: {eq: "images"}}){
+	nodes{
+    relativePath
+    childImageSharp{
+      fluid{
+        srcSetWebp
+      }
+    }
+  }
+  }
+}
+
+-------------------------
+
+
+>npm i gatsby-background-image
+
+-------------------------
+
+> https://www.datocms.com/
+
+-------------------------
+intalar el source para datocms
+
+https://www.gatsbyjs.com/plugins/gatsby-source-datocms/?=source%20datocms
+
+>npm install --save gatsby-source-datocms
+-------------------------
+
+-------------------------
